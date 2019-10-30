@@ -7,6 +7,7 @@
 #include "Lexer.h"
 #include "Tokens.h"
 #include "parser.h"
+#include "interpreter.h"
 
 using namespace std;
 
