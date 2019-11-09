@@ -7,7 +7,7 @@
 #include "Lexer.h"
 #include "Tokens.h"
 #include "parser.h"
-#include "interpreter.h"
+#include "Interpreter.h"
 
 using namespace std;
 
@@ -19,6 +19,10 @@ int main(int argc, char* argv[]) {
 	parser parsing;
 	parsing.setvector(activate.getVector());
   	parsing.startParser();
+
+	parsing.toString();
+
+	Interpreter interpreter = Interpreter(parsing);
 	
 	return 0;
 }

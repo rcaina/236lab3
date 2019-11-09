@@ -49,6 +49,9 @@ void parser::datalogProgram(){
 		cout << "Failure!\n  " << F.toString();
 		return;
 	}
+}
+
+void parser::toString(){
 	
 	cout << "Schemes(" << schemes.size() << "):" << endl;
 
@@ -359,3 +362,24 @@ void parser::operate(){
         }
 
 }
+
+vector<predicate> parser::getSchemes(){
+
+	return this->schemes;
+}
+
+vector<predicate> parser::getFacts(){
+
+        return this->facts;
+}
+
+vector<rulez> parser::getRules(){
+
+        return this->rules;
+}
+
+vector<predicate> parser::getQueries(){
+
+        return this->queries;
+}
+

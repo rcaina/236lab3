@@ -2,7 +2,8 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
-#include "interpreter.h"
+#include "Interpreter.h"
+#include "Relation.h"
 #include <map>
 
 using namespace std;
@@ -12,8 +13,8 @@ class database {
 	public:
 
 	private:
-		vector <relation> relationVect;
-		map <string, relation> relaionMap;
+		vector <Relation> relationVect;
+		map <string, Relation> relationMap;
 
 };
 #endif
