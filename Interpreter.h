@@ -5,7 +5,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "database.h"
+#include "Database.h"
 #include "parser.h"
 #include "Relation.h"
 
