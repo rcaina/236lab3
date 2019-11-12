@@ -11,7 +11,7 @@ using namespace std;
 
 Interpreter::Interpreter(parser& datalogProgram){
 
-	this->dL = datalogProgram;
+//	this->dL = datalogProgram;
 }
 
 void Interpreter::setDatabase(){

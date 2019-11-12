@@ -14,22 +14,22 @@ Relation::Relation(string name, Scheme schemes) {
 	return 0;
 }
 
-Relation Relation::select1(Relation& relation){
+Relation Relation::select1(string val, int column){
 
 	return 0;
 }
 
-Relation Relation::select2(Relation& relation){
+Relation Relation::select2(int column1, int column2){
 
 	return 0;
 }
 
-Relation Relation::project(Relation& relation){
+Relation Relation::project(vector <int>){
 	
 	return 0;
 }
 
-Relation Relation::rename(Relation& relation){
+Relation Relation::rename(Scheme header){
 
 	return 0;
 }

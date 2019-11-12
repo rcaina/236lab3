@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <ctype.h>
+#include "Tuple.h"
 
 using namespace std;
 
