@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Tuple: vector<string> {
+class Tuple: public vector<string> {
 
 	public:
 		

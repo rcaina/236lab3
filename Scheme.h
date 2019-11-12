@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Scheme:vector<string> {
+class Scheme: public vector<string> {
 
         public:
 

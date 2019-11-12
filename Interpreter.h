@@ -21,9 +21,13 @@ class Interpreter {
 	//		this->dL = datalogProgram;
 	//	}
 
+		//Set database should : turn each scheme into a relation and put it in the database
+		//turn each fact into a tuple and put it in a relation (which is in the database)
 		void setDatabase();
 		
-	//	evaluatePredicate(){}  (will need this for lab 4)
+		//sepearte function to evalaute all queries... calls evaluate predicate and prints out final results
+		void evalQueries();
+		Relation evaluatePredicate(predicate pred){} // (will need this for lab 4)
 
 	private:
 

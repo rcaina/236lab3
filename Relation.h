@@ -12,14 +12,15 @@ class Relation {
 
 	public:
 		Relation(string name, Scheme schemes);
-		Relation select1(Relation& relation);
-		Relation select2(Relation& relation);
-		Relation project(Relation& relation);
-		Relation rename(Relation& relation);
+		Relation select1(string val, int column);
+		Relation select2(int column1, int column2);
+		Relation project(vector <int>);
+		Relation rename(Scheme header);
+		void toString();
 
 	private:
 		string name;
-		vector <string> attrNameVect;
+		Scheme attrNameVect;
 		set <Tuple> tupleVect;
 
 };

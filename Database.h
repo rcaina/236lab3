@@ -13,7 +13,7 @@ class Database {
 	public:
 
 	private:
-		vector <Relation> relationVect;
+		
 		map <string, Relation> relationMap;
 
 };
