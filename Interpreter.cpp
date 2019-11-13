@@ -23,7 +23,8 @@ void Interpreter::setDatabase(){
 
 	for(predicate pred: S){
 			
-		Rname = predicate.getName();
-		Rattr = predicate.getAttributes();	
+		Rname = pred.getName();
+		Rattr = pred.getAttributes();
+			
 	}
 }

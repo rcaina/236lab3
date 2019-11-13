@@ -29,6 +29,10 @@ public:
 	
 	void toString();
 
+	vector<predicate> getSchemes();
+        vector<predicate> getFacts();
+        vector<rulez> getRules();
+        vector<predicate> getQueries();
 
 private:
 
@@ -65,11 +69,6 @@ private:
 	void parameter();
 	void expression();
 	void operate();
-	
-	vector<predicate> getSchemes();
-	vector<predicate> getFacts();
-	vector<rulez> getRules();
-	vector<predicate> getQueries();
 };
 
 #endif

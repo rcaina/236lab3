@@ -9,10 +9,10 @@
 using namespace std;
 // fill in details
 
-Relation::Relation(string Sname, Vector<String>String Nschemes) {
+Relation::Relation(string Sname, string Nschemes) {
 
 	name = Sname;
-	attrNameVect = Nschemes;
+	attrName = Nschemes;
 
 }
 
@@ -35,4 +35,26 @@ Relation Relation::rename(Scheme header){
 
 	return 0;
 }
+
+void Relation::addTuple(Tuple tup){
+
+	tupleVect.insert(tup);
+	
+	return;	
+}
+
+void Relation::printTuple(){
+	
+	for(Tuple tup: tupleVect){
+
+//                cout << tup.toString();
+        }
+}
+
+void Relation::toString(){
+
+		cout << name << "=" << attrName << "\n"; 
+
+}
+
 

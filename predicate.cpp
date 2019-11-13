@@ -42,3 +42,13 @@ void predicate::clear(){
 	name = "";
 	items.clear();
 }
+
+string predicate::getName(){
+
+	return name;
+}
+
+vector<string> predicate::getAttributes(){
+
+	return items;
+}
