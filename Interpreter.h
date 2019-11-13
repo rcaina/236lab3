@@ -16,10 +16,7 @@ using namespace std;
 class Interpreter {
 
 	public:
-		Interpreter(parser& datalogProgram); //{
-		
-	//		this->dL = datalogProgram;
-	//	}
+		Interpreter(parser& datalogProgram);
 
 		//Set database should : turn each scheme into a relation and put it in the database
 		//turn each fact into a tuple and put it in a relation (which is in the database)
@@ -27,14 +24,12 @@ class Interpreter {
 		
 		//sepearte function to evalaute all queries... calls evaluate predicate and prints out final results
 		void evalQueries();
-		Relation evaluatePredicate(predicate pred){} // (will need this for lab 4)
+		Relation evaluatePredicate(predicate pred); // (will need this for lab 4)
 
 	private:
 
-		parser dL = parser();
-		string Rname;
-		vector<string> Rattr;
-		
+		parser dL;
+		Database db;
 };
 #endif
 
