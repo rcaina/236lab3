@@ -18,6 +18,8 @@ public:
 	void set_item(string item);
 	string to_string();
 	void clear();
+	string getName();
+	vector<string> getAttributes();
 
 private:
 

@@ -9,9 +9,11 @@
 using namespace std;
 // fill in details
 
-Relation::Relation(string name, Scheme schemes) {
+Relation::Relation(string Sname, Vector<String>String Nschemes) {
 
-	return 0;
+	name = Sname;
+	attrNameVect = Nschemes;
+
 }
 
 Relation Relation::select1(string val, int column){

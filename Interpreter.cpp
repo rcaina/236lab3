@@ -11,15 +11,19 @@ using namespace std;
 
 Interpreter::Interpreter(parser& datalogProgram){
 
-//	this->dL = datalogProgram;
+	this->dL = datalogProgram;
 }
 
 void Interpreter::setDatabase(){
 
 	map<string, Relation> relations;
 
-	for(predicate pred: this->dL){
-		
-		
+	vector<predicate> S;
+	S = dL.getSchemes();
+
+	for(predicate pred: S){
+			
+		Rname = predicate.getName();
+		Rattr = predicate.getAttributes();	
 	}
 }

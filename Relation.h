@@ -11,7 +11,7 @@ using namespace std;
 class Relation {
 
 	public:
-		Relation(string name, Scheme schemes);
+		Relation(string Sname, Vector<String> Nschemes);
 		Relation select1(string val, int column);
 		Relation select2(int column1, int column2);
 		Relation project(vector <int>);

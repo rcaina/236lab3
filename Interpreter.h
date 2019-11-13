@@ -16,10 +16,10 @@ using namespace std;
 class Interpreter {
 
 	public:
-		Interpreter(parser& datalogProgram); //{
+		Interpreter(parser& datalogProgram){
 		
-	//		this->dL = datalogProgram;
-	//	}
+			this->dL = datalogProgram;
+		}
 
 		//Set database should : turn each scheme into a relation and put it in the database
 		//turn each fact into a tuple and put it in a relation (which is in the database)
