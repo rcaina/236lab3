@@ -17,7 +17,7 @@ class Relation {
 		Relation project(vector <int>);
 		
 		string getName();
-		Scheme getAttributes();
+	//	Scheme getAttributes();
 		
 		Relation rename(Scheme header);
 		void toString();

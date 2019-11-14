@@ -9,7 +9,7 @@
 using namespace std;
 // fill in details
 
-Relation::Relation(string Sname, string Nschemes) {
+Relation::Relation(string Sname, Scheme Nschemes) {
 
 	name = Sname;
 	attrName = Nschemes;
@@ -20,30 +20,30 @@ string Relation::getName(){
 
 	return name;
 }
-
+/*
 Scheme Relation::getAttributes(){
 
 	return return attrName;
-}
+}*/
 
 Relation Relation::select1(string val, int column){
 
-	return 0;
+	return this;
 }
 
 Relation Relation::select2(int column1, int column2){
 
-	return 0;
+	return this;
 }
 
 Relation Relation::project(vector <int>){
 	
-	return 0;
+	return this;
 }
 
 Relation Relation::rename(Scheme header){
 
-	return 0;
+	return this;
 }
 
 void Relation::addTuple(Tuple tup){
@@ -63,7 +63,11 @@ void Relation::printTuple(){
 
 void Relation::toString(){
 
-		cout << name << "=" << attrName << "\n"; 
+		cout << name << "=";
+		//for(Tuple tup: tupleVect){
+
+		//	cout << tup << "\n";
+		//}	
 
 }
 
