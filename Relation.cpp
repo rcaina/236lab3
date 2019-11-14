@@ -16,6 +16,16 @@ Relation::Relation(string Sname, string Nschemes) {
 
 }
 
+string Relation::getName(){
+
+	return name;
+}
+
+Scheme Relation::getAttributes(){
+
+	return return attrName;
+}
+
 Relation Relation::select1(string val, int column){
 
 	return 0;

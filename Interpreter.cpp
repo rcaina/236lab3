@@ -12,8 +12,13 @@ using namespace std;
 Interpreter::Interpreter(parser& datalogProgram){
 
 	this->dL = datalogProgram;
-	this->db = map<string, Relation>();
+	//db = new Database;
 
+	for(predicate scheme: dL.getSchemes()){
+
+		Relation r = Relation(scheme.getName(), scheme.getAttributes());
+		db.insert((r.getName(), r));
+	}
 
 }
 
