@@ -1,5 +1,5 @@
 #include <iostream>
-#include <fstream>
+#include <sstream>
 #include <stdlib.h>
 #include <string>
 #include <vector>
@@ -7,24 +7,27 @@
 #include "Relation.h"
 
 using namespace std;
-// fill in details
 
-Relation::Relation(string Sname, Scheme Nschemes) {
+Relation::Relation(string name, Scheme scheme) {
 
-	name = Sname;
-	attrName = Nschemes;
-
+	this->name = name;
+	this->scheme = scheme;
 }
 
 string Relation::getName(){
 
 	return name;
 }
-/*
-Scheme Relation::getAttributes(){
 
-	return return attrName;
-}*/
+int Relation::getSize(){
+
+	return tupleVect.size();
+}
+
+Scheme Relation::getScheme(){
+
+	return scheme;
+}
 
 Relation Relation::select1(string val, int column){
 
@@ -49,26 +52,34 @@ Relation Relation::rename(Scheme header){
 void Relation::addTuple(Tuple tup){
 
 	tupleVect.insert(tup);
-	
-	return;	
 }
 
-void Relation::printTuple(){
-	
+string Relation::toString(){
+
+	stringstream ss;
+
+	ss.str("");
 	for(Tuple tup: tupleVect){
 
-//                cout << tup.toString();
-        }
-}
+		if(tup.size() > 0){
+		
+			for(unsigned i = 0; i < tup.size(); i++){
 
-void Relation::toString(){
-
-		cout << name << "=";
-		//for(Tuple tup: tupleVect){
-
-		//	cout << tup << "\n";
-		//}	
-
+				ss << scheme[i] << "=" <<tup.at(i);
+				if(i < tup.size() - 1){
+				
+					ss << " ";
+				}
+			}
+			
+			if(tup.size() > 0){
+	
+				ss << "\n";
+			}
+		}
+	}
+	
+	return ss.str();
 }
 
 

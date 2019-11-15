@@ -36,8 +36,7 @@ Interpreter::Interpreter(parser& datalogProgram){
 
 }
 
-void Interpreter::setDatabase(){
+void Interpreter::evalQueries(){
 
-	map<string, Relation> relations;
-
+	
 }

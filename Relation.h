@@ -11,22 +11,22 @@ using namespace std;
 class Relation {
 
 	public:
-		Relation(string Sname, Scheme Nschemes);
+		Relation(string name, Scheme scheme);
 		Relation select1(string val, int column);
 		Relation select2(int column1, int column2);
 		Relation project(vector <int>);
 		
 		string getName();
-	//	Scheme getAttributes();
+		Scheme getScheme();
 		
 		Relation rename(Scheme header);
-		void toString();
+		string toString();
 		void addTuple(Tuple tup);
-		void printTuple();
+		int getSize();
 
 	private:
 		string name;
-		Scheme attrName;
+		Scheme scheme;
 		set <Tuple> tupleVect;
 
 };
