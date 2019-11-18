@@ -11,6 +11,11 @@ class Tuple: public vector<string> {
 
 	public:
 		Tuple();
+	//	Tuple(Tuple tup){
+	//		for(string t: tup){
+	//			this->push_back(t);
+	//		}
+	//	}
 		
 		
 	private:

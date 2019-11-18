@@ -12,22 +12,23 @@ class Relation {
 
 	public:
 		Relation(string name, Scheme scheme);
-		Relation select1(string val, int column);
+		Relation select1(int column, string val);
 		Relation select2(int column1, int column2);
 		Relation project(vector <int>);
+		Relation rename(Scheme header);
 		
 		string getName();
 		Scheme getScheme();
 		
-		Relation rename(Scheme header);
 		string toString();
 		void addTuple(Tuple tup);
 		int getSize();
+		int getColumn(string attribute);
 
 	private:
 		string name;
 		Scheme scheme;
-		set <Tuple> tupleVect;
+		set <Tuple> tuples;
 
 };
 #endif
