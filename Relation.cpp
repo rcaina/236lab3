@@ -92,13 +92,9 @@ Relation Relation::project(vector <int> keepColumns){
 Relation Relation::rename(Scheme header){
 
 	Relation result = *this;
-	for(unsigned i = 0; i < header.size(); i++){
 
-		if(header.at(i).compare(result.getScheme().at(i)) != 0){
+	result.setScheme(header);
 
-			result.getScheme().at(i) = header.at(i);
-		}
-	}
 	return result;
 }
 
@@ -115,13 +111,15 @@ string Relation::toString(){
 	for(Tuple tup: tuples){
 
 		if(tup.size() > 0){
-		
+	
+			ss << "  ";
+
 			for(unsigned i = 0; i < tup.size(); i++){
 
 				ss << scheme[i] << "=" <<tup.at(i);
 				if(i < tup.size() - 1){
 				
-					ss << " ";
+					ss << ", ";
 				}
 			}
 			

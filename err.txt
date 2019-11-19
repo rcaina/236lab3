@@ -1,0 +1,45 @@
+Interpreter.cpp: In member function ‘void Interpreter::evalQueries()’:
+Interpreter.cpp:48:12: error: no matching function for call to ‘Relation::Relation()’
+   Relation result;
+            ^~~~~~
+In file included from Database.h:5:0,
+                 from Interpreter.h:8,
+                 from Interpreter.cpp:8:
+Relation.h:14:3: note: candidate: Relation::Relation(std::__cxx11::string, Scheme)
+   Relation(string name, Scheme scheme);
+   ^~~~~~~~
+Relation.h:14:3: note:   candidate expects 2 arguments, 0 provided
+Relation.h:11:7: note: candidate: Relation::Relation(const Relation&)
+ class Relation {
+       ^~~~~~~~
+Relation.h:11:7: note:   candidate expects 1 argument, 0 provided
+Relation.h:11:7: note: candidate: Relation::Relation(Relation&&)
+Relation.h:11:7: note:   candidate expects 1 argument, 0 provided
+In file included from /usr/include/c++/7/bits/stl_map.h:63:0,
+                 from /usr/include/c++/7/map:61,
+                 from Interpreter.cpp:7:
+/usr/include/c++/7/tuple: In instantiation of ‘std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&}; long unsigned int ..._Indexes1 = {0}; _Args2 = {}; long unsigned int ..._Indexes2 = {}; _T1 = const std::__cxx11::basic_string<char>; _T2 = Relation]’:
+/usr/include/c++/7/tuple:1641:63:   required from ‘std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&}; _Args2 = {}; _T1 = const std::__cxx11::basic_string<char>; _T2 = Relation]’
+/usr/include/c++/7/ext/new_allocator.h:136:4:   required from ‘void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::pair<const std::__cxx11::basic_string<char>, Relation>; _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Tp = std::_Rb_tree_node<std::pair<const std::__cxx11::basic_string<char>, Relation> >]’
+/usr/include/c++/7/bits/alloc_traits.h:475:4:   required from ‘static void std::allocator_traits<std::allocator<_CharT> >::construct(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, _Up*, _Args&& ...) [with _Up = std::pair<const std::__cxx11::basic_string<char>, Relation>; _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Tp = std::_Rb_tree_node<std::pair<const std::__cxx11::basic_string<char>, Relation> >; std::allocator_traits<std::allocator<_CharT> >::allocator_type = std::allocator<std::_Rb_tree_node<std::pair<const std::__cxx11::basic_string<char>, Relation> > >]’
+/usr/include/c++/7/bits/stl_tree.h:626:32:   required from ‘void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_construct_node(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Key = std::__cxx11::basic_string<char>; _Val = std::pair<const std::__cxx11::basic_string<char>, Relation>; _KeyOfValue = std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, Relation> >; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, Relation> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type = std::_Rb_tree_node<std::pair<const std::__cxx11::basic_string<char>, Relation> >*]’
+/usr/include/c++/7/bits/stl_tree.h:643:21:   required from ‘std::_Rb_tree_node<_Val>* std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_create_node(_Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Key = std::__cxx11::basic_string<char>; _Val = std::pair<const std::__cxx11::basic_string<char>, Relation>; _KeyOfValue = std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, Relation> >; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, Relation> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type = std::_Rb_tree_node<std::pair<const std::__cxx11::basic_string<char>, Relation> >*]’
+/usr/include/c++/7/bits/stl_tree.h:2398:33:   required from ‘std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_emplace_hint_unique(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Key = std::__cxx11::basic_string<char>; _Val = std::pair<const std::__cxx11::basic_string<char>, Relation>; _KeyOfValue = std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, Relation> >; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, Relation> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator = std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, Relation> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator = std::_Rb_tree_const_iterator<std::pair<const std::__cxx11::basic_string<char>, Relation> >]’
+/usr/include/c++/7/bits/stl_map.h:512:8:   required from ‘std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](std::map<_Key, _Tp, _Compare, _Alloc>::key_type&&) [with _Key = std::__cxx11::basic_string<char>; _Tp = Relation; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, Relation> >; std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type = Relation; std::map<_Key, _Tp, _Compare, _Alloc>::key_type = std::__cxx11::basic_string<char>]’
+Interpreter.cpp:51:45:   required from here
+/usr/include/c++/7/tuple:1652:70: error: no matching function for call to ‘Relation::Relation()’
+         second(std::forward<_Args2>(std::get<_Indexes2>(__tuple2))...)
+                                                                      ^
+In file included from Database.h:5:0,
+                 from Interpreter.h:8,
+                 from Interpreter.cpp:8:
+Relation.h:14:3: note: candidate: Relation::Relation(std::__cxx11::string, Scheme)
+   Relation(string name, Scheme scheme);
+   ^~~~~~~~
+Relation.h:14:3: note:   candidate expects 2 arguments, 0 provided
+Relation.h:11:7: note: candidate: Relation::Relation(const Relation&)
+ class Relation {
+       ^~~~~~~~
+Relation.h:11:7: note:   candidate expects 1 argument, 0 provided
+Relation.h:11:7: note: candidate: Relation::Relation(Relation&&)
+Relation.h:11:7: note:   candidate expects 1 argument, 0 provided

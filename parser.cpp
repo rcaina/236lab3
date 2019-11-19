@@ -42,7 +42,7 @@ void parser::datalogProgram(){
 		queryList();
 		checkRemove("EOF");
 
-		cout << "Success!" << endl;
+//		cout << "Success!" << endl;
 	}
 	catch(Tokens F){
 
