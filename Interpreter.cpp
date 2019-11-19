@@ -37,6 +37,10 @@ Interpreter::Interpreter(parser& datalogProgram){
 }
 
 void Interpreter::evalQueries(){
-
 	
+	for(Query q: dL.getQueries()){
+//new relation
+//loop over each param in query
+//-flowchart
+	}
 }

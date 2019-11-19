@@ -14,10 +14,11 @@ class Relation {
 		Relation(string name, Scheme scheme);
 		Relation select1(int column, string val);
 		Relation select2(int column1, int column2);
-		Relation project(vector <int>);
+		Relation project(vector <int> keepColumns);
 		Relation rename(Scheme header);
 		
 		string getName();
+		void setScheme(Scheme scheme);
 		Scheme getScheme();
 		
 		string toString();

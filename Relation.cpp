@@ -24,6 +24,11 @@ int Relation::getSize(){
 	return tuples.size();
 }
 
+void Relation::setScheme(Scheme scheme){
+
+	this->scheme = scheme;
+}
+
 Scheme Relation::getScheme(){
 
 	return scheme;
@@ -40,6 +45,7 @@ Relation Relation::select1(int column, string val){
 			result.addTuple(t);
 		}
 	}
+
 	return result;
 }
 
@@ -47,23 +53,52 @@ Relation Relation::select2(int column1, int column2){
 
 	Relation result = Relation(name, scheme);
 
-	
+	for(Tuple t: tuples){
+
+		if(t.at(column1).compare(t.at(column2)) == 0){
+
+			result.addTuple(t);
+		}
+	}	
+
 	return result;
 }
 
-Relation Relation::project(vector <int>){
+Relation Relation::project(vector <int> keepColumns){
 	
 	Relation result = Relation(name, scheme);
 
-	
+	Scheme header;
 
+	for(int c: keepColumns){
+
+		header.push_back(scheme.at(c));
+	}
+	
+	result.setScheme(header);
+
+	for(Tuple t: tuples){
+
+		Tuple tup;
+		for(int c: keepColumns){
+
+			tup.push_back(t.at(c));
+		}
+		result.addTuple(tup);
+	}
 	return result;
 }
 
 Relation Relation::rename(Scheme header){
 
-	Relation result = Relation(name, scheme);
-		
+	Relation result = *this;
+	for(unsigned i = 0; i < header.size(); i++){
+
+		if(header.at(i).compare(result.getScheme().at(i)) != 0){
+
+			result.getScheme().at(i) = header.at(i);
+		}
+	}
 	return result;
 }
 
